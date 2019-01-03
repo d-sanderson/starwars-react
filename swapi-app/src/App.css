@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P|Teko');
+
+body {
+  font-family: 'Press Start 2P', cursive;
+
+}
+
+h1 {
+  font-family: 'Teko', sans-serif;
+  font-size: 4em;
+}
