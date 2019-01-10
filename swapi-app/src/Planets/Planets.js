@@ -17,11 +17,9 @@ class Planets extends Component {
 			.then(data => {
 
 				this.setState({
-					starWarsPlanets: data.results,
-					luke : data["results"][0],
+					starWarsPlanets: data.results
 
 				});
-				console.log(this.state.starWarsPlanets);
 
 			})
 

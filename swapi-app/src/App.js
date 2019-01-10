@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import Title from "./Title/Title"
+import OpeningCrawl from "./OpeningCrawl/OpeningCrawl"
 import Characters from "./Characters/Characters";
 import Planets from "./Planets/Planets";
 
@@ -33,7 +34,7 @@ class App extends Component {
 					<br/>
 					<Title/>
 
-
+				<OpeningCrawl/>
 					<Characters/>
 					<Planets/>
 				</div>
