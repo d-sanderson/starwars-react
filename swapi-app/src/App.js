@@ -9,35 +9,40 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			starWarsPeople: {}
+			starWarsFilms: [{}]
 
 		}
+
+	}
+
+
+
+	componentDidMount() {
+
+		fetch("https://swapi.co/api/films/")
+			.then(response => response.json())
+			.then(data => {
+
+				this.setState({
+					starWarsFilms: data.results
+
+				});
+
+
+				// console.log(this.state.starWarsFilms);
+
+			})
+
 	}
 
 
 	render() {
 		return (
-			<div className="container">
-
-				<div className="row">
-					<div className="col s1 offset-s1">1</div>
-					<div className="col s1">2</div>
-					<div className="col s1">3</div>
-					<div className="col s1">4</div>
-					<div className="col s1">5</div>
-					<div className="col s1">6</div>
-					<div className="col s1">7</div>
-					<div className="col s1">8</div>
-					<div className="col s1">9</div>
-					<div className="col s1">10</div>
-
-					<br/>
-					<Title/>
-
-				<OpeningCrawl/>
+			<div>
+					<OpeningCrawl/>
 					<Characters/>
 					<Planets/>
-				</div>
+
 			</div>
 		);
 	}

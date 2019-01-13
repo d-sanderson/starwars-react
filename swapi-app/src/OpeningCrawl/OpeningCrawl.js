@@ -31,25 +31,29 @@ class OpeningCrawl extends Component {
 
 	render() {
 		return (
-			<div>
+			<div class="hidden">
 				<h2>Intro</h2>
-				{this.state.starWarsFilms.map(({opening_crawl})=>
-				<div className="fade">
+				{this.state.starWarsFilms.map(({opening_crawl, title, episode_id})=>
+					<div className="fade">
 
-				<section className="star-wars">
-					<div className="crawl">
-						<div className="title">
-							<p>Episode IV</p>
-							<h1>A New Hope</h1>
-						</div>
+						<section className="star-wars">
+							<div className="crawl">
+								<div className="title">
+									<p>Episode {episode_id}</p>
+									<h1>{title}</h1>
+								</div>
 
-						<p>{opening_crawl}</p>
+								<p>{opening_crawl}</p>
+							</div>
+						</section>
+
+						<br/>
+
+						<br/>
 					</div>
-				</section>
-			</div>
 
 
-					)}
+				)}
 
 
 			</div>
