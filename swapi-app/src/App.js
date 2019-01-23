@@ -40,7 +40,7 @@ class App extends Component {
 		return (
 			<div>
 
-				<title></title>
+		<Title/>
 					<OpeningCrawl/>
 					<Characters/>
 					<Planets/>

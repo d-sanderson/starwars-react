@@ -31,10 +31,9 @@ class OpeningCrawl extends Component {
 
 	render() {
 		return (
-			<div className={styles.hidden}>
-				<h2>Intro</h2>
+			<div className="hidden">
 				{this.state.starWarsFilms.map(({opening_crawl, title, episode_id})=>
-					<div className="fade">
+					<div>
 
 						<section className="star-wars">
 							<div className="crawl">

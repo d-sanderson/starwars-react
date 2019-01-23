@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=News+Cycle');
+
+
+body {
+	font-size: calc(1vw + 1vh + 1.5vmin);
+}
+
+div {
+	background: #000;
+	font-size: 1rem;
+
+}
+
+.header {
+	color: #4bd5ee;
+	font-family: "News Cycle", sans-serif;
+	font-weight: 400;
+	line-height: 1.35;
+	width: 20em;
+}
+
+.header {
+	$intro-width: 15em;
+	width: $intro-width;
+	margin: 0 0 0 (- $intro-width / 2);
+	font-size: 400%;
+	font-weight: 400;
+	color: rgb(75, 213, 238);
+	opacity: 0;
+	animation: intro 6s ease-out 1s;
+}
+
+
+@keyframes intro {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
