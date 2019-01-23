@@ -19,8 +19,6 @@ class Characters extends Component {
 
 				this.setState({
 					starWarsPeople: data.results,
-					luke : data["results"][0],
-
 				});
 
 			})
@@ -34,9 +32,8 @@ class Characters extends Component {
 		return (
 			<div>
 				<h2> Characters </h2>
-			<ul>
 				{this.state.starWarsPeople.map(({name, gender, height, homeworld, birth_year, url})=>
-					<div>
+					<p>
 
 						<h1><a href={url}>{name}</a></h1>
 						<br/>
@@ -46,11 +43,13 @@ class Characters extends Component {
 						<li>Sex: {gender}</li>
 						<li>Height: {height}</li>
 <br/>
-					</div>
+					</p>
 
 
-)}
-</ul>
+)
+
+				}
+
 
 			</div>
 		);
