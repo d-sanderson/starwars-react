@@ -1,53 +1,38 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import Title from "./Title/Title"
-import OpeningCrawl from "./OpeningCrawl/OpeningCrawl"
-import Characters from "./Characters/Characters";
-import Planets from "./Planets/Planets";
+import Title from './Title/Title';
+import Characters from './Characters/Characters';
+import Planets from './Planets/Planets';
 
 class App extends Component {
-	constructor() {
-		super();
-		this.state = {
-			starWarsFilms: [{}]
+  constructor() {
+    super();
+    this.state = {
+      starWarsFilms: [{}],
+    };
+  }
 
-		}
+  componentDidMount() {
+    fetch('https://swapi.co/api/films/')
+      .then(response => response.json())
+      .then((data) => {
+        this.setState({
+          starWarsFilms: data.results,
+        });
+        const { starWarsFilms } = this.state;
+        console.log(starWarsFilms);
+      });
+  }
 
-	}
-
-
-
-	componentDidMount() {
-
-		fetch("https://swapi.co/api/films/")
-			.then(response => response.json())
-			.then(data => {
-
-				this.setState({
-					starWarsFilms: data.results
-
-				});
-
-
-				// console.log(this.state.starWarsFilms);
-
-			})
-
-	}
-
-
-	render() {
-		return (
-			<div>
-
-		<Title/>
-					<OpeningCrawl/>
-					<Characters/>
-					<Planets/>
-
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div>
+        <Title />
+        <Characters />
+        <Planets />
+      </div>
+    );
+  }
 }
 
 export default App;

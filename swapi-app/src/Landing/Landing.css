@@ -21,29 +21,3 @@ div {
 	position: relative;
 	bottom: 50px;
 }
-.logo {
-	/*opacity: 0;*/
-	animation: logo 9s ease-out 9s;
-
-}
-
-
-.logo {
-	position: relative;
-	top: 99999px;
-	transform-origin: 50% 100%;
-	animation: logo 60s linear;
-}
-
-
-
-@keyframes logo {
-	0% {
-		top: -100px;
-		transform: rotateX(20deg)  translateZ(0);
-	}
-	100% {
-		top: -6000px;
-		transform: rotateX(25deg) translateZ(-2500px);
-	}
-}
