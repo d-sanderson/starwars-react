@@ -1,13 +1,10 @@
 import React from 'react';
-import  '../App.css';
+import '../App.css';
 
-
-const Title = () => {
-	return (
-		<div>
-			<h1 className="title">Star Wars</h1>
-		</div>
-	);
-}
+const Title = () => (
+  <div>
+    <h1 className="title">Star Wars</h1>
+  </div>
+);
 
 export default Title;

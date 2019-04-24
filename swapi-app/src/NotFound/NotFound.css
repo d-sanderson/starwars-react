@@ -1,0 +1,11 @@
+.h2 {
+  text-align: center;
+  color: yellow;
+  margin: 5% 25%;
+}
+
+img {
+  max-width: 80%;
+  height: auto;
+  margin: 5% 10% 0px 10%;
+}

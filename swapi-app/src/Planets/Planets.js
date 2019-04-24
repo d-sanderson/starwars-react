@@ -4,7 +4,7 @@ import './Planets.css';
 class Planets extends Component {
   constructor() {
     super();
-    this.state = { starWarsPlanets: [{}] };
+    this.state = { starWarsPlanets: null };
   }
 
   componentDidMount() {
@@ -19,6 +19,11 @@ class Planets extends Component {
 
   render() {
     const { starWarsPlanets } = this.state;
+    if (!starWarsPlanets) {
+      return (
+        <div className="h2">loading</div>
+      );
+    }
     return (
       <div>
         <h2>Planets</h2>

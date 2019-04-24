@@ -5,7 +5,7 @@ import Characters from './Characters/Characters';
 import OpeningCrawl from './OpeningCrawl/OpeningCrawl';
 import Planets from './Planets/Planets';
 import Home from './Home/Home';
-import NotFound from './NotFound';
+import NotFound from './NotFound/NotFound';
 import Landing from './Landing/Landing';
 
 const Router = () => (
